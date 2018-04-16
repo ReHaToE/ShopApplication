@@ -16,9 +16,21 @@ import com.lkrawiec.shopapplication.model.Model;
 public class View {
     
     /* Model to work on */
-    private final Model m;
+    private final Model model;
+    /* GUI of this project */
+    private final GUI gui;
     
-    public View(Model m) {
-        this.m = m;
+    /**
+     * Initializes the view
+     * 
+     * @param model 
+     */
+    public View(Model model) {
+        this.model = model;
+        this.gui = new GUI();
+    }
+    
+    public void start() {
+        gui.setVisible();
     }
 }
